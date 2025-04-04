@@ -10,14 +10,15 @@ body {
 }
 
 body::before {
-    content:'' ;
-    background-color: #090909;
+    content: '';
+    background-color: #121212;
     height: 150%;
     width: 100%;
     position: absolute;
-    top: 0;
-    left: 380px;
+    top: -15px;
+    left: -750px;
     transform: rotate(-70deg);
+
 }
 
 body::after {
@@ -29,6 +30,7 @@ body::after {
     font-size: 250px;
     font-weight: bold;
     transform: translate(-50%, -50%);
+    opacity: 0.5;
 }
 
 .logo {
@@ -61,16 +63,54 @@ h1 {
 .imgagem-tenis {
     width: 800px;
     transform: rotate(-25deg);
-    
+
 }
 
 .caixa-principal {
-    display: flex; /*habilita alguns super poderes  */
-    justify-content: space-between;/* alinha na horizontal */
-    align-items: center; /* alinha na vertical */
+    display: flex;
+    /*habilita alguns super poderes  */
+    justify-content: space-between;
+    /* alinha na horizontal */
+    align-items: center;
+    /* alinha na vertical */
     height: 75%;
+    z-index: 1;
+    position: relative;
 }
 
 .caixa-texto {
-    max-width: 500px; /* largura maxima */
+    max-width: 500px;
+    /* largura maxima */
+}
+
+.caixa-botoes {
+    z-index: 2;
+    position: relative;
+    display: flex;
+    margin-top: 50px;
+    gap: 20px;
+    
+}
+      
+.botoes {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.verde {
+    background-color: #ccee66;
+}
+
+.rosa {
+    background-color: #ff9eb5;
+}
+
+.azul {
+    background-color: #58cced;
+}
+
+.botoes:active {
+    opacity: 0.6;
 }
